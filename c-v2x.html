@@ -13,7 +13,7 @@
   </head>
   <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-light navbar fixed-top navbar-dark bg-dark">
     <a class="navbar-brand" href="c-v2x.html">C-V2X</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@
           <a class="nav-link" href="pages/features.html">Features <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/download.html">Download and Changelog</a>
+          <a class="nav-link" href="pages/download.html">Download</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -51,35 +51,52 @@
 
 <div class="container">
     <div class="row">
-      <div class="col-sm-4">
-        <h2>About</h2>
-        <h5>Photo of me:</h5>
-        <div class="fakeimg">Fake Image</div>
-        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-        <h3>Some Links</h3>
-        <p>Lorem ipsum dolor sit ame.</p>
-        <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-        </ul>
-        <hr class="hidden-sm hidden-md hidden-lg">
-      </div>
-      <div class="col-sm-8">
-        <h2>TITLE HEADING</h2>
-        <h5>Title description, Dec 7, 2017</h5>
-        <div class="fakeimg">Fake Image</div>
-        <p>Some text..</p>
-        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+
+       <div class="col-md-6">
+		<p>
+          Our open source implementation of the 3GPP standard C-V2X. It is based on both the <i>SimuLTE</i> OMNeT++ simulator which allows for LTE network simulations, it also integrates with the <i>Artery</i> framework, which allows for our model to interact with the current ITS-G5 standard.
+		</p>
+
+		<div class="visible-desktop">
+		  <p>If you use our C-V2X model, we would appreciate a citation of our work.</p>
+          <br>
+        </div>
+
+        <a href="#"><img src="media/acm-logo.png" title="ACM" alt="acm" class="img-thumbnail"/></a> <!--<a class="bibauthorlink" href="http://www.cs.ucc.ie/~bm18/">Brian McCarthy</a>-->
+         Brian McCarthy and Aisling O'Driscoll
+         <br>
+         "<strong>OMNeT++ C-V2X Mode 4: An Extension for Cellular Vehicular Communication Networks</strong>,<br>
+         "<i>1st ACM Workshop on Technologies, mOdels, and Protocols for Cooperative Connected Cars (TOP-Cars)</i><br>
+         July 2019,<br>
+         <strong>Submitted and under review</strong>.
+<!-- <small>[<a href="DOI">DOI</a>, <a href="BIB">BibTeX</a>, <a href="PDF">PDF and Details...</a>]</small></li>-->
         <br>
-        <h2>TITLE HEADING</h2>
-        <h5>Title description, Sep 2, 2017</h5>
-        <div class="fakeimg">Fake Image</div>
-        <p>Some text..</p>
-        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
       </div>
+
+      <div class="col-md-6">
+        <h2>News</h2>
+        <h5>C-V2X Mode 4 implementation v.1.0 Available</h5>
+        <p>The first version of the C-V2X OpenSource implementation of the 3GPP C-V2X standard for OMNeT++ is now available for download</p>
+        <br>
+
+        <h2>Download </h2>
+        <p>Download is available here, and a link to the Git</p>
+        <a href="pages/download.html" class="btn btn-primary" role="button">Download</a>
+        <a href="https://github.com/brianmc95/artery.git" class="btn btn-outline-primary" role="button">GitHub</a>
+        <br>
+      </div>
+
     </div>
-  </div>
+</div>
+
+
+
+<footer class="footer">
+    <div class="container">
+      Contact is available here: <a href="mailto:b.mccarthy@cs.ucc.ie">b.mccarthy@cs.ucc.ie</a><br>
+    </div>
+</footer>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
