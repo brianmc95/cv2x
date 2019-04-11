@@ -14,7 +14,7 @@
   <body>
 
   <nav class="navbar navbar-expand-lg navbar-light navbar fixed-top navbar-dark bg-dark">
-    <a class="navbar-brand" href="../../c-v2x.html">C-V2X</a>
+    <a class="navbar-brand" href="../../index.html">OpenC-V2X</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,10 +31,10 @@
             Documentation
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="overview.html">Overview</a>
-            <a class="dropdown-item" href="implementation.html">Implementation</a>
+<!--            <a class="dropdown-item" href="overview.html">Overview</a>-->
+<!--            <a class="dropdown-item" href="implementation.html">Implementation</a>-->
             <a class="dropdown-item" href="setup.html">Setup</a>
-            <a class="dropdown-item" href="tutorial.html">Tutorial</a>
+<!--            <a class="dropdown-item" href="tutorial.html">Tutorial</a>-->
             <a class="dropdown-item" href="faq.html">FAQ</a>
           </div>
         </li>
@@ -44,21 +44,93 @@
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Cellular Vechicle To Everything (C-V2X)</h1>
-      <p class="lead">A 3GPP compliant C-V2X implementation for OMNeT++</p>
+      <h1 class="display-5">Open Cellular Vechicle To Everything (C-V2X)</h1>
+      <p class="lead">A 3GPP compliant Open Source C-V2X implementation for OMNeT++</p>
     </div>
   </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8">
-        <h2>In progress</h2>
-        <h5>This document is still being actively developed.</h5>
-        <p>See here soon for more detail</p>
-        <br>
+
+<div class="container-fluid">
+         <h3>Open-CV2X Setup</h3>
+         <hr>
+         <div class="row">
+            <div class="col-2">
+               <div class="list-group" id="myScrollspy">
+                  <a class="list-group-item" href="#content-requirements">Requirements</a>
+                  <a class="list-group-item" href="#content-git">GIT Download</a>
+                  <a class="list-group-item" href="#content-tar">Alternative Download</a>
+                  <a class="list-group-item" href="#content-make">Make components</a>
+                  <a class="list-group-item" href="#content-cmake">Cmake setup</a>
+                  <a class="list-group-item" href="#content-run">Run Scenario</a>
+               </div>
+            </div>
+            <div class="col-10">
+               <div data-spy="scroll" data-target="#myScrollspy" data-offset="10"
+                  style="height:600px;overflow-y: scroll;padding:5px; border: 1px solid #ccc;">
+                  <h4 id="content-requirements">Requirements</h4>
+                  <ul>
+                    <li>Ubuntu 18.04</li>
+                    <li>SUMO 1 or greater</li>
+                    <li>CMake 3.13 or greater</li>
+                    <li>GNU GCC 7.3</li>
+                    <li>OMNeT++ 5.4</li>
+                    <li>Boost 1.65.1</li>
+                  </ul>
+                  <p>Something of note is that these are the versions which have been tested, other versions of the software
+                  may still work, though support for such setups will not be possible.</p>
+                  <h4 id="content-git">GitHub Download</h4>
+                  <p>
+                    If you wish to use GitHub then clone the following repository
+
+                    <pre><code>git clone https://github.com/brianmc95/artery.git</code></pre>
+
+                    You then will need to install all the submodules through the following command
+
+                    <pre><code>git submodule update --init --recursive</code></pre>
+
+                    You can also clone the following way to get all at once
+
+                    <pre><code>git clone --recurse-submodule https://github.com/brianmc95/artery.git</code></pre>
+
+                    If you get an error similar to the below use <mark>git submodule sync</mark> to ensure that the correct versions will install.
+
+                    <pre><code>git submodule update --init --recursive error: Server does not allow request for unadvertised object d3a9540affb8a5cc68266fe4ca9500586da125de Fetched in submodule path 'extern/vanetza', but it did not contain d3a9540affb8a5cc68266fe4ca9500586da125de. Direct fetching of that commit failed.</code></pre>
+
+                  <h4 id="content-tar">Alternative Download</h4>
+                  <p>
+                    An alternative means of downloading the model is through the <a href="../download.html">Download</a> section which gives you a tar file
+                    with all the necessary files, then simply following on with the next step to setup the model.
+                  </p>
+
+                  <h4 id="content-make">Make Components</h4>
+                  <p>
+                     Now you must make all the necessary submodules this can be done through the <mark>make all</mark> command in the root directory of the project. This works for all except for veins which require the following to configure and make.
+                     <pre><code>cd extern/veins & ./configure & make</code></pre>
+                     These can also be built separately by calling <mark>make inet</mark>, <mark>make vanetza</mark> and <marK>make simulte</marK> This can often be preferable as running them in parallel is much quicker (though <mark>INET</mark> must be made before <mark>SimuLte</mark>).
+                 <p></p>
+
+                 <h4 id="content-cmake">Make Components</h4>
+                  <p>
+                    Now you will need to setup a build directory for the project, as <mark>Artery</mark> and this project use <mark>Cmake</mark> as it's build system.
+                    <pre><code>mkdir build
+cd build
+cmake ..</code></pre>
+
+Before you can fully build the system you need to ensure that the <mark>WITH_SIMULTE</mark> option is set in cmake. this is done in the build directory by using <mark>cmake-gui</mark> or <mark>ccmake</mark> if that is installed.
+
+                 Now if you run <mark>cmake --build .</mark> then you will have a fully setup model.
+
+                 <h4 id="content-run">Run Scenario</h4>
+                 <p>
+                 Now you should be able to run the module using the following command.
+                 <pre><code>cmake --build build --target run_simulte-cars</code></pre>
+                 This will run the Open-CV2X highway-fast scenario.
+                 </p>
+               </div>
+            </div>
+         </div>
+         <hr>
       </div>
-    </div>
-  </div>
 
 <footer class="footer">
     <div class="container">
