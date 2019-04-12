@@ -33,8 +33,8 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 <!--            <a class="dropdown-item" href="documentation/overview.html">Overview</a>-->
 <!--            <a class="dropdown-item" href="documentation/implementation.html">Implementation</a>-->
-            <a class="dropdown-item" href="documentation/setup.html">Setup</a>
-<!--            <a class="dropdown-item" href="documentation/tutorial.html">Tutorial</a>-->
+            <a class="dropdown-item" href="documentation/installation.html">Installation</a>
+            <a class="dropdown-item" href="documentation/tutorial.html">Tutorial</a>
             <a class="dropdown-item" href="documentation/faq.html">FAQ</a>
           </div>
         </li>
@@ -44,8 +44,8 @@
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-5">Open Cellular Vechicle To Everything (C-V2X)</h1>
-      <p class="lead">A 3GPP compliant Open Source C-V2X implementation for OMNeT++</p>
+      <h1 class="display-5">Open Cellular Vehicle To Everything (Open-C-V2X) - Mode 4</h1>
+      <p class="lead">A 3GPP compliant C-V2X Mode 4 Open Source implementation for OMNeT++</p>
     </div>
   </div>
 
@@ -61,11 +61,59 @@
     </div>
   </div>
 
-<footer class="footer">
-    <div class="container">
-      Contact is available here: <a href="mailto:b.mccarthy@cs.ucc.ie">b.mccarthy@cs.ucc.ie</a><br>
+  <br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+      <h4 id="content-git">GitHub Download</h4>
+      If you wish to Download the project from GitHub there are two methods by which this can be done.
+      <br>
+      <br>
+      <h5>Method 1:</h5>
+        Clone the following repository
+
+        <pre><code>git clone https://github.com/brianmc95/artery.git</code></pre>
+
+        You then will need to install all the submodules through the following command
+
+        <pre><code>git submodule update --init --recursive</code></pre>
     </div>
-</footer>
+  </div>
+  <div class="row">
+    <div class="col-10">
+      <h5>Method 2:</h5>
+
+        You can also clone the following way to get all at once
+
+        <pre><code>git clone --recurse-submodule https://github.com/brianmc95/artery.git</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10">
+      <p>If you get an error similar to the below use <mark>git submodule sync</mark> to ensure that the correct versions will install.
+
+      <pre><code>git submodule update --init --recursive error: Server does not allow request for unadvertised object d3a9540affb8a5cc68266fe4ca9500586da125de Fetched in submodule path 'extern/vanetza', but it did not contain d3a9540affb8a5cc68266fe4ca9500586da125de. Direct fetching of that commit failed.</code></pre></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10">
+      <h4 id="content-tar">Alternative Download</h4>
+      <p>
+        Alternatively you can simply download the tar ball and untar it and you will be ready to follow installation.
+      </p>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="container-fluid alert-secondary fixed-bottom">
+    <div class="row justify-content-around">
+        <div class="col-xs pull-left">Contact: <a href="mailto:b.mccarthy@cs.ucc.ie">b.mccarthy@cs.ucc.ie</a></div>
+        <div class="col-xs pull-right">Produced with the support of Science Foundation Ireland (SFI) under Grant No: 17/RC-PhD/3479</div>
+    </div>
+</div>
 
 
     <!-- Optional JavaScript -->
