@@ -14,7 +14,7 @@
   <body>
 
   <nav class="navbar navbar-expand-lg navbar-light navbar fixed-top navbar-dark bg-dark">
-    <a class="navbar-brand" href="../index.html">OpenC-V2X</a>
+    <a class="navbar-brand" href="../index.html">OpenCV2X</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -44,8 +44,8 @@
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-5">Open Cellular Vehicle To Everything (Open-C-V2X) - Mode 4</h1>
-      <p class="lead">A 3GPP compliant C-V2X Mode 4 Open Source implementation for OMNeT++</p>
+      <h1 class="display-5">Open Cellular Vehicle To Everything (OpenCV2X) - Mode 4</h1>
+      <p class="lead">A 3GPP compliant CV2X Mode 4 Open Source implementation for OMNeT++</p>
     </div>
   </div>
 
@@ -53,8 +53,8 @@
     <div class="row">
       <div class="col-md-6">
         <h2>Download </h2>
-        <p>Download is available here, and a link to the Git</p>
-        <a href="../downloads/v1.0/open-cv2x.tgz" class="btn btn-primary" role="button">Download</a>
+        <p>Two download options are available: <br>1) Direct Download <br> 2) Download via Git</p>
+        <a href="../downloads/v1.0/opencv2x.tgz" class="btn btn-primary" role="button">Direct Download</a>
         <a href="https://github.com/brianmc95/artery.git" class="btn btn-outline-primary" role="button">GitHub</a>
         <br>
       </div>
@@ -66,8 +66,16 @@
 <div class="container">
   <div class="row">
     <div class="col-10">
-      <h4 id="content-git">GitHub Download</h4>
-      If you wish to Download the project from GitHub there are two methods by which this can be done.
+      <h4>1. Direct Download:</h4>
+      Download the tar ball, unpack it and follow the installation.
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10">
+      <h4 id="content-git">2. GitHub Download</h4>
+      If you wish to download the project from GitHub there are two methods by which this can be done.
       <br>
       <br>
       <h5>Method 1:</h5>
@@ -75,7 +83,7 @@
 
         <pre><code>git clone https://github.com/brianmc95/artery.git</code></pre>
 
-        You then will need to install all the submodules through the following command
+        Install all the submodules through the following command
 
         <pre><code>git submodule update --init --recursive</code></pre>
     </div>
@@ -84,7 +92,7 @@
     <div class="col-10">
       <h5>Method 2:</h5>
 
-        You can also clone the following way to get all at once
+        You can also clone the following way to get it all at once
 
         <pre><code>git clone --recurse-submodule https://github.com/brianmc95/artery.git</code></pre>
     </div>
@@ -94,14 +102,6 @@
       <p>If you get an error similar to the below use <mark>git submodule sync</mark> to ensure that the correct versions will install.
 
       <pre><code>git submodule update --init --recursive error: Server does not allow request for unadvertised object d3a9540affb8a5cc68266fe4ca9500586da125de Fetched in submodule path 'extern/vanetza', but it did not contain d3a9540affb8a5cc68266fe4ca9500586da125de. Direct fetching of that commit failed.</code></pre></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-10">
-      <h4 id="content-tar">Alternative Download</h4>
-      <p>
-        Alternatively you can simply download the tar ball and untar it and you will be ready to follow installation.
-      </p>
     </div>
   </div>
 </div>
