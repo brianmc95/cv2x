@@ -9,7 +9,7 @@
     <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="../css/cv2x.css" rel="stylesheet">
 
-    <title>C-V2X OMNeT++</title>
+    <title>OpenCV2X</title>
   </head>
   <body>
 
@@ -49,64 +49,72 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Download </h2>
-        <p>Two download options are available: <br>1) Direct Download <br> 2) Download via Git</p>
-        <a href="../downloads/v1.0/opencv2x.tgz" class="btn btn-primary" role="button">Direct Download</a>
-        <a href="https://github.com/brianmc95/artery.git" class="btn btn-outline-primary" role="button">GitHub</a>
-        <br>
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-md-2 sidenav">
+          <img class="img-fluid" src="../media/connect.gif" alt="Chania" width="460" height="345">
+          <img class="img-fluid" src="../media/ucc.jpg" alt="Chania" width="460" height="345">
+      </div>
+      <div class="col-md-8 text-left">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Download </h2>
+            <p>Two download options are available: <br>1) Direct Download <br> 2) Download via Git</p>
+            <a href="../downloads/v1.0/opencv2x.tgz" class="btn btn-primary" role="button">Direct Download</a>
+            <a href="https://github.com/brianmc95/artery.git" class="btn btn-outline-primary" role="button">GitHub</a>
+            <br>
+          </div>
+        </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col-10">
+          <h4>1. Direct Download:</h4>
+          Download the tar ball, unpack it and follow the installation.
+          <br>
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10">
+          <h4 id="content-git">2. GitHub Download</h4>
+          If you wish to download the project from GitHub there are two methods by which this can be done.
+          <br>
+          <br>
+          <h5>Method 1:</h5>
+            Clone the following repository
+
+            <pre><code>git clone https://github.com/brianmc95/artery.git</code></pre>
+
+            Install all the submodules through the following command
+
+            <pre><code>git submodule update --init --recursive</code></pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10">
+          <h5>Method 2:</h5>
+
+            You can also clone the following way to get it all at once
+
+            <pre><code>git clone --recurse-submodule https://github.com/brianmc95/artery.git</code></pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10">
+          <p>If you get an error similar to the below use <mark>git submodule sync</mark> to ensure that the correct versions will install.
+
+          <pre><code>git submodule update --init --recursive error: Server does not allow request for unadvertised object d3a9540affb8a5cc68266fe4ca9500586da125de Fetched in submodule path 'extern/vanetza', but it did not contain d3a9540affb8a5cc68266fe4ca9500586da125de. Direct fetching of that commit failed.</code></pre></p>
+        </div>
+      </div>
+      </div>
+
+      <div class="col-md-2 sidenav">
+          <img class="img-fluid" src="../media/SFI_colour.png" alt="Chania" width="460" height="345">
       </div>
     </div>
   </div>
-
-  <br>
-
-<div class="container">
-  <div class="row">
-    <div class="col-10">
-      <h4>1. Direct Download:</h4>
-      Download the tar ball, unpack it and follow the installation.
-      <br>
-      <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-10">
-      <h4 id="content-git">2. GitHub Download</h4>
-      If you wish to download the project from GitHub there are two methods by which this can be done.
-      <br>
-      <br>
-      <h5>Method 1:</h5>
-        Clone the following repository
-
-        <pre><code>git clone https://github.com/brianmc95/artery.git</code></pre>
-
-        Install all the submodules through the following command
-
-        <pre><code>git submodule update --init --recursive</code></pre>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-10">
-      <h5>Method 2:</h5>
-
-        You can also clone the following way to get it all at once
-
-        <pre><code>git clone --recurse-submodule https://github.com/brianmc95/artery.git</code></pre>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-10">
-      <p>If you get an error similar to the below use <mark>git submodule sync</mark> to ensure that the correct versions will install.
-
-      <pre><code>git submodule update --init --recursive error: Server does not allow request for unadvertised object d3a9540affb8a5cc68266fe4ca9500586da125de Fetched in submodule path 'extern/vanetza', but it did not contain d3a9540affb8a5cc68266fe4ca9500586da125de. Direct fetching of that commit failed.</code></pre></p>
-    </div>
-  </div>
-</div>
-
-<br>
 
 <div class="container-fluid alert-secondary fixed-bottom">
     <div class="row justify-content-around">
