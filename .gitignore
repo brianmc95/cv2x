@@ -1,0 +1,6 @@
+.idea
+# ignore files in folder foo
+downloads/latest/*
+downloads/v1.0/*
+# but keep the folder
+!downloads/*/.keep
