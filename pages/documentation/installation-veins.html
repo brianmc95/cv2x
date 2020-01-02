@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link href="../../bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="../../css/cv2x.css" rel="stylesheet">
+
+        <title>OpenCV2X</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light navbar fixed-top navbar-dark bg-dark">
+                <a class="navbar-brand" href="../../index.html">OpenCV2X</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../features.html">Features <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../download.html">Download</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Documentation
+                    </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <!--            <a class="dropdown-item" href="overview.html">Overview</a>-->
+            <!--            <a class="dropdown-item" href="implementation.html">Implementation</a>-->
+                            <a class="dropdown-item" href="installation-artery.html">Installation Artery</a>
+                            <a class="dropdown-item" href="installation-veins.html">Installation Veins</a>
+                            <a class="dropdown-item" href="tutorial.html">Tutorial</a>
+                            <a class="dropdown-item" href="faq.html">FAQ</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-5">Open Cellular Vehicle To Everything (OpenCV2X) - Mode 4</h1>
+                <p class="lead">A 3GPP compliant CV2X Mode 4 Open Source implementation for OMNeT++</p>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <h3>Open-CV2X Installation</h3>
+            <hr>
+            <div class="row">
+                <div class="col-2">
+                    <div class="list-group" id="myScrollspy">
+                        <a class="list-group-item" href="#content-requirements">Requirements</a>
+                        <a class="list-group-item" href="#content-install-components">Install Components</a>
+                        <a class="list-group-item" href="#content-project-features">Project Features and References</a>
+                        <a class="list-group-item" href="#content-run">Run Scenario</a>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div data-spy="scroll" data-target="#myScrollspy" data-offset="10" style="height:600px;overflow-y: scroll;padding:5px; border: 1px solid #ccc;">
+                        <h4 id="content-requirements">Requirements</h4>
+                            <p>
+                                Note the below are the dependency versions that have been tested, other versions of the software may still work, though support for such setups will not be possible.
+                            </p>
+                            <ul>
+                                <li>Ubuntu 18.04 (other linux systems should work as well but are not tested)</li>
+                                <li>SUMO 1 or greater: available <a href="https://sumo.dlr.de/docs/Downloads.html">here</a></li>
+                                <li>GNU GCC 7.3</li>
+                                <li>OMNeT++ 5.4 or greater: available <a href="https://omnetpp.org/download/">here</a> </li>
+                                <li>Veins 5.0 or latest: available <a href="http://veins.car2x.org/download/">here</a> </li>
+                                <li>INET v3.6.6: available <a href="https://github.com/inet-framework/inet/releases/tag/v3.6.6">here</a> </li>
+                            </ul>
+
+                        <br>
+                        <h4 id="content-install-components">Install components</h4>
+                            <ul>
+                                <li>Install OMNeT++ information with regards to this is available <a href="https://doc.omnetpp.org/omnetpp/InstallGuide.pdf">here</a>. Importantly there is an issues
+                                with the osgEarth which will lead to issues with running simulations. I have no need for this and as such simply turn it off. This is done when going to configure
+                                OMNeT++ before making it you use the below command this turns off the osgEarth functionality.<pre><code>./configure WITH_OSGEARTH=no WITH_OSG=no</code></pre></li>
+                                <li>Open the OMNeT++ IDE with the <mark>omnetpp</mark> command.</li>
+                                <li>Create a new workspace under your preferred name, ensure not to install INET through the dialogue when making a new workspace.</li>
+                                <li>Import the projects required, through the <mark>File | Import | General | Existing Projects into Workspace</mark> dialogues.</li>
+                                <li>Using this dialogue install both INET and SimuLTE (as the <b><i>lte</i></b> project) into the workspace.</li>
+                                <li>Finally add the veins project, but specifcally for this one you want to also check the box for <mark>Search for nested projects</mark>.
+                                    Then you must install the <b><i>veins</i></b> project and the <b><i>veins_inet3</i></b> project</li>
+                            </ul>
+
+                        <br>
+                        <h4 id="content-project-features">Project Features and References</h4>
+                            <p>
+                                Now the project needs to have the correct Project features activated to ensure SimuLTE runs correctly.
+                                Right click on the <b><i>lte</i></b> project and select <b>Properties</b> Ensure that the <mark>OMNeT++ | Project Features</mark>
+                                and the <mark>Project References</mark> are all ticked like the below images. i.e. <b><i>SimuLTE Cars</i></b> is active and <b><i>inet</i></b>, <b><i>veins</i></b>, <b><i>veins_inet3</i></b>.
+                                <img src="../../media/Project-features.png" alt="project-features" width="39%">
+                                <img src="../../media/Project-references.png" alt="project-referemces" width="40%">
+                            </p>
+                        <br>
+                        <h4 id="content-run">Run Scenario</h4>
+                            <p>
+                                At this point you should be able to run a simulation, this is done the same way as running any veins based simulations.
+                            </p>
+                            <ul>
+                                <li>
+                                    cd into the directory where veins is installed on your system and start the sumo launcher.
+                                    <pre><code>python2 sumo-launchd.py</code></pre>
+                                </li>
+                                <li>
+                                    At this point you must go back to OMNeT++ and open the <mark>omnetpp.ini</mark> file in <mark>lte | simulations | Mode4</mark>
+                                </li>
+                                <li>
+                                    Then you can simply click the <mark>Run</mark> button in the top left and a configuration will be made that will run your simulation.
+                                    Though everything will build first and this can take some time but will be faster on subsequent runs.
+                                </li>
+                                <li>
+                                    You can change the way these runs are done by going into the configurations through the drop down button next to the run button and selecting
+                                    <mark>Run Configurations ...</mark>.
+                                </li>
+                                <li>
+                                    Running debug simulations is described in the <a href="tutorial.html#content-veins-debugging">tutorial page</a>.
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="container-fluid alert-secondary fixed-bottom">
+            <div class="row justify-content-around">
+                <div class="col-xs pull-left">Contact: <a href="mailto:b.mccarthy@cs.ucc.ie">b.mccarthy@cs.ucc.ie</a></div>
+                <div class="col-xs pull-right">Produced with the support of Science Foundation Ireland (SFI) under Grant No: 17/RC-PhD/3479</div>
+            </div>
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="../../bootstrap/js/bootstrap.js"></script>
+    </body>
+</html>
