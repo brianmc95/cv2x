@@ -108,6 +108,44 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
+                                    <h5 class="panel-title">
+                                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                            Reporting Bugs
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                                    <div class="panel-body px-3 mb-4">
+                                        <p>Help is available, though it is important to determine what help you need.</p>
+                                        <ul>
+                                            <li>Issues with the model can be directed to the <a href="https://github.com/brianmc95/artery/issues">GitHub Issues</a> page and opening an issue</li>
+                                            <li>Issues can also be directed to myself <a href="mailto:b.mccarthy@cs.ucc.ie">b.mccarthy@cs.ucc.ie</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
+                                    <h5 class="panel-title">
+                                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                            Common Issues
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                    <div class="panel-body px-3 mb-4">
+                                        <p></p>
+                                        <ul>
+                                            <li><b>INET:</b> Commonly issues arise due to the incorrect version of INET being used in the project. You specifically need <a href="https://github.com/inet-framework/inet/releases/tag/v3.6.6">v3.6.6</a>.</li>
+                                            <li><b>OSGEarth:</b> When using the project I have noticed issues when OSGEarth is activated, turning it off is necessary. This is done through using the following command when building OMNeT++.
+                                                <pre><code>./configure WITH_OSGEARTH=no WITH_OSG=no</code></pre>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
