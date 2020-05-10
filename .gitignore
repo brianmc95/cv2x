@@ -1,7 +1,7 @@
 .idea
 # ignore files in folder foo
-downloads/latest/*
-downloads/v1.0/*
-downloads/v1.1.0/*
+downloads/*/*
 # but keep the folder
 !downloads/*/.keep
+
+.DS_Store

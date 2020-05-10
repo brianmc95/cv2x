@@ -75,11 +75,49 @@
                                 <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
                                     <h5 class="panel-title">
                                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
-                                            v1.1.0
+                                            v1.2.0
                                         </a>
                                     </h5>
                                 </div>
                                 <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                                    <div class="panel-body px-3 mb-4">
+                                        <p>Changes</p>
+                                        <ul>
+                                            <li>Received power distributed across the RBs used in transmission. This impacts on the RSRP, SINR/SNR and RSSI calculations.</li>
+                                            <li>RSSI calculation updated to align with the definition by 3GPP.</li>
+                                            <li>Some efficiency improvements which avoid calculating interference multiple times instead now we do it only once per received transmission.</li>
+                                            <li>Pathloss model updated in line with the analytical model.</li>
+                                            <li>Additional BLER curves added based on the analytical model.</li>
+                                            <li>A general reduction in the duplicate code in the channel model.</li>
+                                            <li>Tidying of simulation folders and changes to SUMO files, removed fixed paths a knock-on effect of this is that using the model requires updating of <code>.launchd.xml</code> files.</li>
+                                            <li>Addition of statistics allowing you to determine the cause of packet loss e.g. interference or propagation loss.</li>
+                                        </ul>
+                                        <p>Bugfixes</p>
+                                        <ul>
+                                            <li>Fix issue with sign on <code>probResourceKeep</code> variable being the wrong way resulting in the probability being inverted.</li>
+                                            <li>Fix issue where RBs were not assigned correctly to the SCI in the non-adjacent mode.</li>
+                                            <li>Fix issue where SCIs did not experience interference in the non-adjacent mode.</li>
+                                            <li>Fixes to PHY layer calculations to ensure accuracy of calculation of RSRP,SINR/SNR and RSSI.</li>
+                                        </ul>
+                                        <p>Downloads</p>
+                                        <ul>
+                                            <li><a href="../../downloads/v1.2.0/v1.2.0_opencv2x.tar.gz">OpenCV2X tar file</a></li>
+                                            <li><a href="../../downloads/v1.2.0/v1.2.0_simulte.tar.gz">SimuLTE tar file</a></li>
+                                            <li><a href="../../downloads/v1.2.0/v1.2.0_opencv2x.zip">OpenCV2X zip file</a></li>
+                                            <li><a href="../../downloads/v1.2.0/v1.2.0_simulte.zip">SimuLTE zip file</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
+                                    <h5 class="panel-title">
+                                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse1">
+                                            v1.1.0
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
                                     <div class="panel-body px-3 mb-4">
                                         <p>Features</p>
                                         <ul>
@@ -101,14 +139,14 @@
                                 </div>
                             </div>
                             <div class="panel panel-default">
-                                <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
+                                <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
                                     <h5 class="panel-title">
-                                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse2">
                                             v1.0.0
                                         </a>
                                     </h5>
                                 </div>
-                                <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
                                     <div class="panel-body px-3 mb-4">
                                         <p>Features</p>
                                         <ul>
