@@ -57,15 +57,19 @@
                 <div class="row content">
                     <div class="col-md-1 align-content-end">
 
-                        <a href="http://www.sfi.ie/"><img class="img" src="../../media/SFI_colour.png" alt="SFI Logo" width="200%"></a>
+                        <a href="../../index.html"><img class="img" src="../../media/OpenCV2X-Logo.svg" alt="SFI Logo" width="200%"></a>
                         <br>
                         <br>
                         <br>
-                        <a href="https://connectcentre.ie/"><img class="img" src="../../media/connect_logo_color.png" alt="CONNECT Logo" width="200%" ></a>
+                        <a href="http://www.sfi.ie/"><img class="img" src="../../media/SFI_colour.png" alt="SFI Logo" width="175%"></a>
                         <br>
                         <br>
                         <br>
-                        <a href="https://www.ucc.ie/"><img class="img" src="../../media/ucc.jpg" alt="UCC Logo" width="200%" href="https://www.ucc.ie/"></a>
+                        <a href="https://connectcentre.ie/"><img class="img" src="../../media/connect_logo_color.png" alt="CONNECT Logo" width="175%" ></a>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="https://www.ucc.ie/"><img class="img" src="../../media/ucc.jpg" alt="UCC Logo" width="175%" href="https://www.ucc.ie/"></a>
 
                     </div>
                     <div class="col-md-8 offset-md-1">
@@ -84,13 +88,12 @@
                                         <p>Changes</p>
                                         <ul>
                                             <li>BLER curve lookup based on the packet not individual RBs.</li>
-                                            <li>Nakagami fading implementation fix ensuring it works correctly and can more easily be adapted by those using the model.</li>
-                                            <li>Change to how propagation and interference results are determined to ensure that one random variable determines the outcome of both as opposed to two previously.</li>
+                                            <li>Fix to the Nakagami fading implementation. Recoding to make it easier to adapt if extending the model.</li>
+                                            <li>Change to the calculation of propagation and interference results to ensure that one random variable determines their outcome as opposed to two random variables as per previous releases.</li>
                                         </ul>
                                         <p>Bugfixes</p>
                                         <ul>
-                                            <li>Fix issue where SCI rbs not accounted for in RSRP calculations.</li>
-                                            <li>Fix to simulations SUMO scenarios to ensure positions updates happen at higher intervals now every 5ms.</li>
+                                            <li>SCI RBs are now accounted for in RSRP calculations.</li>
                                         </ul>
                                         <p>Downloads</p>
                                         <ul>
