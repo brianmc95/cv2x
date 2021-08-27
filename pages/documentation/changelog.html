@@ -76,6 +76,37 @@
                         <h2>Changelog for OpenCV2X Mode 4</h2>
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
+                                <div class="panel-heading p-3 mb-3" role="tab" id="heading140">
+                                    <h5 class="panel-title">
+                                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse130" aria-expanded="true" aria-controls="collapse0">
+                                            v1.4.0
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse140" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                                    <div class="panel-body px-3 mb-4">
+                                        <p>Changes</p>
+                                        <ul>
+                                            <li>Introduced additional statistics such as awareness i.e. number of neighbouring nodes which a ue is aware of based on previously decoded CAMS. Includes some additional information about selected grant resources such as whether they were previously seen as reserved yet were still selected as a potential CSR.</li>
+                                            <li>Improved subchannel selection to ensure the correct number is selected based on packet size..</li>
+                                            <li>Removed redundant variables and generally reduced code base where possible.</li>
+                                        </ul>
+                                        <p>Bugfixes</p>
+                                        <ul>
+                                            <li>Fixed issue with HD errors being attributed to the incorrect subframe. </li>
+                                            <li>Fixed issue where packets which failed to be decoded were incorrectly passed to upper layers by the HARQ buffers.</li>
+                                        </ul>
+                                        <p>Downloads</p>
+                                        <ul>
+                                            <li><a href="../../downloads/v1.4.0/OpenCV2X-v1.4.0.tar.xz">OpenCV2X tar file</a></li>
+                                            <li><a href="../../downloads/v1.4.0/simulte-v1.4.0.tar.xz">SimuLTE tar file</a></li>
+                                            <li><a href="../../downloads/v1.4.0/OpenCV2X-v1.4.0.zip">OpenCV2X zip file</a></li>
+                                            <li><a href="../../downloads/v1.4.0/simulte-v1.4.0.zip">SimuLTE zip file</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
                                 <div class="panel-heading p-3 mb-3" role="tab" id="heading130">
                                     <h5 class="panel-title">
                                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse130" aria-expanded="true" aria-controls="collapse0">
